@@ -1,0 +1,24 @@
+n = input("Enter String: ")
+substrings = {}
+sub = {}
+for i in range(len(n)):
+    s = n[i:len(n):2]
+    substrings[f'substring_{i}'] = s
+for key, value in substrings.items():
+    print(f"{key}: {value}")
+for key, s in substrings.items():
+    sub[key] = [] 
+    for j in range(len(s) - 1):
+        if s[j] == s[j + 1]:
+           
+            sub[key].append(1)  
+            sub[key].append(1)  
+        else:
+            sub[key].append(0)  
+        
+           
+    
+    if len(s) > 0:
+        sub[key].append(0)  
+
+    print(f"Pattern for {key}: {sub[key]}")
